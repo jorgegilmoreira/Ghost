@@ -26,7 +26,7 @@ RUN buildDeps=' \
 		unzip \
 	' \
 	&& set -x \
-	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends && rm -rf /var/lib/apt/lists/* \
+	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
 COPY . /usr/src/ghost
 RUN  npm install --production \
